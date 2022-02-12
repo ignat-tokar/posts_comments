@@ -9,8 +9,7 @@ router.get('/', async (req, res)=>{
     const posts = await Post.find();
     return res.json(posts);
   }catch(error){
-    console.log(error);
-    return res.stauts(500).json({message: error});
+    return res.stauts(500).json({Error: error.message});
   }
 });
 
@@ -18,13 +17,11 @@ router.post('/create', async (req, res)=>{
   try{
     const title = req.body.title[0];
     const description = req.body.description[0];
-
     const newPost = new Post({title: title, description: description});
     newPost.link = `/posts/detail/t/${newPost._id}`;
     newPost.save();
   }catch(error){
-    console.log(error);
-    return res.status(500).json({ message: error });
+    return res.status(500).json({Error: error.message});
   }
 });
 
@@ -37,8 +34,7 @@ router.post('/edit/:id', async (req, res)=>{
       description: description
     }});
   }catch(error){
-    console.log(error);
-    return res.status(500).json({message: error});
+    return res.status(500).json({Error: error.message});
   }
 });
 
@@ -50,8 +46,7 @@ router.post('/upvote/:id', async (req, res)=>{
       upvotes: upvotesValue
     }});
   }catch(error){
-    console.log(error);
-    return res.status(500).json({message: error});
+    return res.status(500).json({Error: error.message});
   }
 });
 
@@ -60,8 +55,7 @@ router.post('/delete/:id', async (req, res)=>{
     await Comment.deleteMany({postId: req.params.id});
     await Post.deleteOne({_id: req.params.id});
   }catch(error){
-    console.log(error);
-    return res.status(500).json({message: error});
+    return res.status(500).json({Error: error.message});
   }
 });
 
