@@ -2,13 +2,13 @@
 ## Installing
 **You must have be installed docker on your computer**
 
-Dowload directory of the project and open it in terminal, after put a command:
+Dowload folder of the project, open it in terminal and put the command:
 `docker-compose build`
 
 Wait for building images, and put the next command:
 `docker-compose up`
 
-Wait for launch server, after open a browser and put an adress in search field:
+Wait for launch server, open a browser and put adress below in search field:
 `http://localhost:3000`
 
 ## Description
