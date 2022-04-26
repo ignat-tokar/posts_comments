@@ -1,15 +1,15 @@
 # posts_comments
-## Установка
-**У вас должен быть установлен docker**
+## Installing
+**You must have be installed docker on your computer**
 
-Скачайте папку проекта и откройте ее в терминале, после введите команду: 
+Dowload directory of the project and open it in terminal, after put a command:: 
 `docker-compose build`
 
-Дождитесь создание образов, после введите команду: 
+Wait for building images, and put the next command:
 `docker-compose up`
 
-Дождитесь запуска, после откройте браузер и введите в строку адреса: 
+Wait for launch server, after open a browser and put an adress in search field:
 `http://localhost:3000`
 
-## Описание
-Простое веб-приложение, которое копирует функционал веб-ресурса Hacker News.
+## Description
+Simple web application, that repliciate funcionality of Hacker News web resource.
