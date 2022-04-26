@@ -2,7 +2,7 @@
 ## Installing
 **You must have be installed docker on your computer**
 
-Dowload directory of the project and open it in terminal, after put a command:: 
+Dowload directory of the project and open it in terminal, after put a command:
 `docker-compose build`
 
 Wait for building images, and put the next command:
